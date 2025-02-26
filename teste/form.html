@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario com diversos tipos de campos</title>
+</head>
+<body>
+    <form action="processa_dados.php" method="post">
+        <p>O que você achou do site?<br>
+        <input type="radio" name="avaliacao" value="muitobom checked">Muito Bom
+        <input type="radio" name="avaliacao" value="bom">Bom
+        <input type="radio" name="avaliacao" value="regular">Regular
+        <input type="radio" name="avaliacao" value="ruim">Ruim
+        </p>
+        <p>
+        Qual a seçao que mais gostou?
+        <select name="secao" size="1">
+            <option value="emcartaz">Em cartaz</option>
+            <option value="trilhasonora">Trilha Sonora</option>
+            <option value="fotos">Galeria de Fotos</option>
+            <option value="bilheteria">Bilheteria</option>
+            <option value="outra">Outra</option>
+        </select>
+        </p>
+        <p>Digite seus comentários no espaço abaixo: <br>
+            <textarea name="comentarios" rows="5" cols="42"></textarea>
+        </p>
+        <p>Diga-nos como podemos entrar em contato: <br>
+            Nome <input type="text" size="35" maxlength="256" name="nome"> <br>
+            Email  <input type="text" size="35" maxlength="256" name="email"> <br> 
+            Telefone fixo  <input type="text" size="35" maxlength="256" name="fonefixo"> <br>
+            Telefone celular <input type="text" size="35" maxlength="256" name="fonecelular"><br>          
+        </p>
+          <input type="checkbox" name="novidades" value="nov">
+          Quero receber as novidades do site por email.
+          <p>
+           <input type="submit" value="Enviar Dados"> 
+           <input type="reset" value="Limpar Dados"></p>
+    </form>
+    
+</body>
+</html>
