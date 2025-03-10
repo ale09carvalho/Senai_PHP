@@ -1,0 +1,140 @@
+---------------
+ Arrays
+ ---------------
+ Um array faz: é uma variável que consegue guardar vários valores simultâneamente, como uma lista, por exemplo.
+ Se eu precisasse de uma variável que pudesse guardar vários valores diferentes?
+ ----------------
+ Vetor
+ -----------------
+ Um vetor é um array de uma dimensão, ou seja, pode guardar vários valores do mesmo tipo em uma única lista,
+ como uma lista de nomes, ou uma lista de números, por exemplo.
+ Um vetor pode guardar quantos valores forem necessários, desde que sejam em uma lista e sejam do mesmo tipo de dados.
+ 
+ A estrutura de um array é $array = [valor01; valor02; valor03;];.
+ 
+ ===> Forma 1 <=====
+ index.php
+ <?php
+     // vetor
+     $estados = ["Distrito Federal", "Goiás", "Rio de Janeiro", "São Paulo", "Minas Gerais"];
+ 
+     // mostrando os valores do array na tela
+     echo $estados[0] . "<br>";
+     echo $estados[1] . "<br>";
+     echo $estados[2] . "<br>";
+     echo $estados[3] . "<br>";
+     echo $estados[4] . "<br>";
+ ?>
+ Explicação do código-fonte
+ O vetor do exemplo possui 5 valores.
+ A contagem decimal para o computador não é a mesma para o ser humano: enquanto começamos uma contagem a partir do número 1, 
+ o computador entende o 0 (zero) como primeiro número, e começa a contagem a partir dele. 
+ Ou seja, o primeiro valor é o valor 0, o segundo valor é o valor 1, o terceiro valor é o valor 2....e assim por diante
+ 
+ ===> Forma 2 <=====
+ Há uma outra forma de criar um array em php: $nome_do_array = array(valor01, valor02, valor03);. Veja:
+ index.php
+ Usando laço de repetição para simplificar a saída do array
+ Na verdade, há uma forma de simplificar a exibição dos valores dos arrays: você pode usar um laço de repetição para percorrer o array e assim exibir o valor na tela com um único comando. Veja:
+ 
+ Programa 03 - Exibindo lista com while
+ index.php
+ <?php
+     // vetor
+     $estados = ["Distrito Federal", "Goiás", "Rio de Janeiro", "São Paulo", "Minas Gerais"];
+ 
+     // contador
+     $cont = 0;
+ 
+     // mostrando os valores do array na tela usando o while
+     while ($cont < count($estados)) {
+         echo $estados[$cont] . "<br>";
+         $cont++;
+     }
+ ?>
+ 
+ Programa 04 - Exibindo lista com do...while
+ index.php
+ <?php
+     // vetor
+     $estados = ["Distrito Federal", "Goiás", "Rio de Janeiro", "São Paulo", "Minas Gerais"];
+ 
+     // contador
+     $cont = 0;
+ 
+     // mostrando os valores do array na tela usando o while
+     do {
+         echo $estados[$cont] . "<br>";
+         $cont++;
+     } while ($cont < count($estados));
+ ?>
+ 
+ Programa 05 - Exibindo lista com for
+ index.php
+ <?php
+     // vetor
+     $estados = ["Distrito Federal", "Goiás", "Rio de Janeiro", "São Paulo", "Minas Gerais"];
+ 
+     for ($cont = 0; $cont < count($estados); $count++) {
+         echo $estados[$cont] . "<br>";
+     }
+ ?>
+ O resultado na tela em todos esses programas será exatamente o mesmo. A única coisa que muda entre eles é o algoritmo do PHP.
+ 
+ Explicando os códigos-fonte
+ A variável $cont é um contador que começa do 0 (zero), e aumenta a cada vez que o laço de repetição é executado. Dessa forma, basta colocar essa variável dentro dos colchetes para exibir o valor da posição do valor correspondente à variável $cont.
+ 
+ Já a função count()serve para contar o número de posições do array.
+ -------------------------
+ foreach
+ ----------------------
+ O foreach é uma estrutura de laço de repetição similar ao for, mas que trabalha exclusivamente com elementos iteráveis, como um array, por exemplo. 
+ Acaba que é considerada a forma mais simplificada de percorrer um array. Veja:
+ 
+ Prorgrama 06 - Exibindo lista com foreach
+ index.php
+ <?php
+     // vetor
+     $estados = ["Distrito Federal", "Goiás", "Rio de Janeiro", "São Paulo", "Minas Gerais"];
+ 
+     foreach ($estados as $estado) {
+         echo $estado . "<br>";
+     }
+ ?>
+ O resultado final deste programa é exatamente o mesmo dos programas acima.
+ 
+ Explicando o código-fonte: --- No foreach não há um contador, nem a necessidade de indicar a posição de um valor em um array: o laço pega cada valor da lista e atribui a uma variável, 
+ no caso $estado, exibe na tela, e passa para a próxima iteração.
+ 
+ Essa é considerada a melhor forma de percorrer um array.
+ ----------------------
+ Arrays associativos
+ ------------------------
+ O PHP permite ainda a declaração de arrays associativos. 
+ Para esse fim, o construtor array() pode receber quais serão as chaves às quais os valores estão associados como parâmetro. 
+ Um exemplo dessa sintaxe pode ser visto a seguir:
+ 
+ $array = array(“chave1” => 1, “chave2” => “PHP”, “chave3” => false);
+ 
+ Ou ainda:
+ 
+ $array = [“chave1” => 1, “chave2” => “PHP”, “chave3” => false];
+ 
+ Veja o exemplo abaixo sobre como se trabalhar com arrays com chaves associativas:
+ -----------
+ Programa 07
+ index.php
+ <?php
+     // declaração de array
+     $dados = ['Nome' => "Alex Machado", 'Idade' => 40, 'Profissão' => "Programador"];
+ 
+     // percorrendo o array
+     foreach ($dados as $campo => $valor) {
+         echo $campo . ": " . $valor . ".<br>";
+     }
+ ?>
+ Explicando o código-fonte
+ Um array associativo funciona aplicando um valor que chamamos de chave para cada item do array. Dessa forma, é possível associar cada chave ao seu valor correspondente.
+ 
+ Obs: semrpe use aspas simples para os nomes das chaves.
+
