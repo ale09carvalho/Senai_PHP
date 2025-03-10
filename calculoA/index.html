@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área e Equação</title>
+</head>
+<body>
+    <h1>Cálculos</h1>
+    <form action="result.php" method="post">
+        <label for="a">Valor 1:</label>
+        <input type="number" name="a" ><br><br/>
+
+        <label for="b">Valor 2:</label>
+        <input type="number" name="b"><br><br/>
+
+        <label for="calculo">Escolha o cálculo:</label>
+        <select name="calculo">
+            <option value="area_quadrilatero">Área do Quadrilátero</option>
+            <option value="area_triangulo">Área do Triângulo</option>
+            <option value="equacao_1grau">Equação do 1º Grau</option>
+        </select><br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>
