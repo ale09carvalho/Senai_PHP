@@ -1,0 +1,86 @@
+Os programas só rodam uma única vez.
+Caso o usuário deseje rodar o programa de novo, ele deverá executar mais uma vez o programa, o que torna a tarefa de executar um programa cansativo, visto que o usuário deverá rodar várias vezes o mesmo programa apenas para testar diferentes resultados.
+É aí onde entram os loops, ou laços de repetição.
+
+Estrutura de repetição:
+Eles são blocos de programação que executam um único algoritmo várias vezes seguidas antes de finalizar.
+O número de vezes em que ele é executado depende de vários fatores, como vamos aprender nessa aula.
+-----------------
+while
+----------------
+é um bloco que repete um algoritmo enquanto uma determinada condição for verdadeira. 
+Vamos começar com uma demonstração bem simples: criar um programa que exibe uma contagem de 10 a 0...coisa simples.
+Programa 01 (Contagem Regressiva)
+index.php
+<?php
+    // declaração de variável
+    $numero = 10;
+
+    // laço de repetição
+    while ($numero >= 0) {
+        // exibição
+        echo $numero . "<br>";
+
+        // decremento
+        $numero--;
+    }
+?>
+Entendendo o código --->
+A variável $numero foi inicializada com o valor 10.
+Ao entrarmos com essa variável no laço while, pedimos para o nosso algoritmo para executar esse laço sempre que o valor dessa variável for 10.
+Como a nossa variável começa justamente com esse valor, ele entra no loop, exibindo o valor da variável.
+A linha de código $numero-- é um decremento, ou seja, essa linha será responsável por diminiuir o valor da variável em -1, 
+o que significa que após essa linha, o valor de $numero será 9, e após isso ele retornará para o início do loop.
+Retornando para o início do loop, ele fará uma nova verificação, porém, a variável $numero terá agora um novo valor, que será 9. 
+Como 9 é maior que 0, ele entra novamente no loop, exibindo o 9 e subtraindo por -1, assumindo o valor 7 e retornando ao início do loop...e assim por diante, 
+até que finalmente o valor de $numero seja -1, impedindo que o loop seja executado novamente e encerrando a aplicação.
+
+OBSERVAÇÃO
+Caso não existisse a linha $numero--, o valor dele seria sempre 10 a cada nova execução do loop, e o valor nunca iria diminuir, fazendo com que o programa entrasse no que chamamos de loop infinito, 
+sendo executado eternamente, ou pelo menos até o programa consumir 100% da RAM, sobrecarregando a memória e fazendo o SO da máquina parar de funcionar e desligando a máquina, prejudicando qualquer trabalho não salvo.
+
+Se o valor de $numero fosse -1, o programa sequer entraria no loop, e encerraria sem mostrar nenhuma saída de dados.
+----------------------------------------
+do...while
+------------------------------------------
+O laço do...while funciona de forma quase idêntica ao while. 
+A única diferença é que enquanto no while o algoritmo é executado somente quando a condição é verdadeira, 
+no do...while o algoritmo é sempre executado uma vez pelo menos, e a condição serve para repetir o algoritmo, 
+já que ele só será verificado após a execução do mesmo, e não antes.
+
+Vamos para o mesmo exemplo anterior, mas desta vez executando com do...while:
+Programa 02
+index.php
+<?php
+    // declaração de variável
+    $numero = 10;
+
+    // laço de repetição
+    do {
+        echo $numero . "<br>";
+        $numero--;
+    } while ($numero >= 0);
+?>
+O resultado na tela é exatamente o mesmo do anterior.
+
+------------------------------------------
+for
+-----------------------------------------
+O laço for é um dos loops mais usados na programação. 
+É um laço de repetição como o anterior também, mas com uma diferença: é sempre executado com um número finito de vezes, evitando que o programa entre em loop infinito. 
+A desvantagem em relação so while é que o número de loops dessa vez é ditado pelo próprio programa ao invés do usuário final. 
+Este, por sua vez, não possui controle sobre o número de loops a ser executado no for, ou pelo menos não diretamente.
+
+O grande truque aqui é que o laço for já possui obrigatoriamente dentro dele um contador e um incremento/decremento.
+
+Para o nosso exemplo atual, vamos fazer outro contador, mas desta vez, partindo do 0 até 10:
+
+Programa 03
+idnex.php
+<?php
+    // estrutura de repetição
+    for ($numero = 0; $numero <= 10; $numero++) {
+        echo $numero . "<br>";
+    }
+?>
+Segue abaixo o resultado: 0 1 2 3 4 5 6 7 8 9 10
