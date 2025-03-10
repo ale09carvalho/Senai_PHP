@@ -1,0 +1,101 @@
+Operadores aritméticos
+São usados nas operações matemáticas, como equações ou as 4 operações básicas da matemática, por exemplo.
++: soma.
+-: subtração.
+*: multiplicação.
+/: divisão.
+%: módulo. Utilizado para retornar o resto de uma divisão.
+**: potênciação.
+
+Exemplos:
+Soma
+<?php  echo 2+2; ?>
+Subtração
+<?php  echo 3-1; ?>
+Multiplicação
+<?php  echo 4*2; ?>
+Divisão
+<?php  echo 6-3; ?>
+Obs: o resultado de uma divisão SEMPRE será um ponto flutuante.
+
+Módulo
+<?php  echo 7%2; ?>
+Obs: o módulo de uma divisão SEMPRE será um número inteiro.
+Potência
+<?php  echo 4**2; ?>  ou
+<?php  echo pow(4,2); ?>
+
+Operadores relacionais
+São usados para comparar valores.
+>: maior que.
+<: menor que.
+>=: maior ou igual a.
+<=: menor ou igual a.
+==: igualdade (não confundir com =).
+!=: diferente.
+
+Operadores lógicos ou booleanos
+Geralmente são utilizados em conjunto com estrutures de decisão ou de repetição.
+and: operador E. Utilizado para verificar se duas afirmações são verdadeiras. Se uma for falsa, então a sentença inteira retorna falso.
+or: operador OU. Utilizado para verificar se uma ou outroa afirmação é verdadeira. Basta que uma delas seja verdadeiro para retornar verdadeiro. As duas precisam ser falsas para retornar falso.
+not: operador NÃO. É um operador de negação. A afirmação precisa ser falsa para retornar verdadeiro.
+
+Operadores de atribuição
+São operadores empregados para realizar a atribuição de valores entre os operandos.
+=: atribui, recebe um valor.
++=: soma a um valor e atribui o resultado.
+++: incremento.
+--: decremento.
+-=: subtrai a um valor e atribui o resultado.
+*=: multiplica a um valor e atribui o resultado.
+/=: divide a um valor e atribui o resultado.
+%=: obtém o resto de uma divisão e atribui o resultado
+
+Exemplos
+Atribuição
+<?php
+    $valor = 1;
+    echo $valor$;
+?>
+Atribuição de soma
+<?php
+    $valor = 1;
+    $valor += 2;
+    echo $valor;
+?>
+Incremento
+<?php
+    $valor++;
+    echo $valor;
+?>
+Atribuição de subtração
+<?php
+    $valor = 10;
+    $valor -= 1;
+    echo $valor;
+?>
+Decremento
+<?php
+    $valor--;
+    echo $valor;
+?>
+Atribuição de multiplicação
+<?php
+    $valor = 5;
+    $valor *= 2;
+    echo $valor;
+?>
+Atribuição de divisão
+<?php
+    $valor = 6;
+    $valor /= 2;
+    echo $valor;
+?>
+Atribuição de módulo
+<?php
+    $valor = 5;
+    $valor %= 3;
+    echo $valor;
+?>
+
+==> Esses foram os principais operadores, ou pelo menos os mais utilizados
