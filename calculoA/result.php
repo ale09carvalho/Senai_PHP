@@ -1,42 +1,40 @@
 <?php
-    // funçoes
-function area_quadrilatero($a, $b) {
-    return $a * $b;
+// funçoes area do quadrilatero
+function areaQuadrilatero($b, $h)
+{
+    return $b * $h;
 }
-function area_triangulo($a, $b) {
-    return ($a * $b) / 2;
+// area do triangulo
+function areaTriangulo($b, $h)
+{
+    return $b * $h / 2;
 }
-function equacao_1grau($a, $b) {
-    if ($a == 0) {
-        return "A equação não é válida (a não pode ser zero).";
-    }
-    return -($b / $a);
+function equacao($a, $b)
+{
+    return  -$b/$a;
 }
-    #declaraçao variaveis
-    $a = str_replace(",",".",$_POST['a']);
-    $b = str_replace(",",".",$_POST['b']);
-    $calculo = $_POST['calculo'];
-    $resultado = "";
 
-    //estrutura de decisao
-    switch ($calculo){
-        case "area_quadrilatero":
-            $resultado = areaQuadrilatero($a, $b);
-            $resultado = "Área do Quadrilátero: " . $resultado;
-            break;
+// declaraçao variaveis
+$n1 = str_replace(",", ".", $_POST['n1']);
+$n2 = str_replace(",", ".", $_POST['n2']);
+$operacao = $_POST['operacao'];
 
-        case "area_triangulo":
-            $resultado = areaTriangulo($a,$b);
-            $resultado = "Área do Triângulo: " . $resultado;
-            break;
-        case "equacao_1grau":
-            $resultado = equacaoPrimeiroGrau($a, $b);
-            $resultado = "Resultado da Equação do 1º Grau: " . $resultado;
-            break;
-        default:
-            $resultado = "Cálculo não reconhecido.";
-            break;
-        }
-            echo "<h1>Resultado</h1>";
-            echo "<p>$resultado</p>";
-        ?>
+//estrutura de decisao
+switch ($operacao) {
+    case "quadrilatero":
+        echo "Area do quadrilatero é " . calcularQuadrilatero ($n1, $n2) . ".";
+        break;
+
+    case "triangulo":
+        echo "Area do Triangulo é " . calcularTriangulo ($n1, $n2) . ".";
+        break;
+
+    case "Equacao 1º Grau":
+        echo "A equaçao do 1 Grau é " . calcularequacao1Grau($n1, $n2) . ".";
+        break;
+}
+
+//link para  voltar para a pagina anterior
+echo '<br /><a href="index.html"> Voltar</a>';
+
+?>
