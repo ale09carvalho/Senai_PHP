@@ -97,8 +97,8 @@ E-mail
                 
                 // saida de dados
 
-                foreach ($dados as $chave => $valor) {
-                    echo "<b> $chave: $valor <br>";
+                foreach ($dados as $campo => $valor) {
+                    echo "<b>" .$campo. ":</b>" .$valor ."<br />";
                 }
                 
 
