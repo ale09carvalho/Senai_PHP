@@ -1,0 +1,33 @@
+Para declarar  uma funçao em PHP utiliza-se operador function seguido do nome sem espaco em branco iniciadocom letra.
+function nome_funçao ($arg1, $arg2, $argN)
+Na mesama linha digita os argumentos(parâmetros) funçao vai receber separado por virgula - encapsulado por chave {} vem o codigo da funçao.
+No final a clausula return para retornar o resultado da funçao (interger, sting, array, objeto etc)
+
+function nome_funçao ($arg1, $arg2, $argN)
+{
+$valor = $arg1 + $arg2 + $argN;
+return $valor;
+}
+
+* Toda variavel declarada dentro do escopo da funçao sao LOCAIS.
+Para acessar variavel externa no contexto funçao sem passa-la como parametro e necessaria declara-la como GLOBAL.
+Variavel global  e acessada a partir de qualquer ponto d aplicaçao.
+
+#funçao criada converte quilometros para milhas, enquanto acumula quantidade km percorrido em uma variavel global ($tatal)
+
+<?php   
+    function Km2mi($quilometros)
+    {
+        global $total;
+        $total += $quilometros;
+        return $quilometros * 0.6;
+    }
+
+    echo 'percorreu '.Km2mi(100).' milhas<br>\n';
+    echo 'percorreu '.Km2mi(200).' milhas<br>\n';
+    echo 'percorreu no total'. $total . "quilometros <br>\n";
+    ?>
+   Resultado:
+    percorreu60 milhas
+    percorreu 120 milhas
+    percorreu no tatal de 300 quilometros
