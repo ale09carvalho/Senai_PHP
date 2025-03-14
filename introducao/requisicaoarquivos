@@ -9,3 +9,23 @@ include: Inclui e avalia um arquivo, emitindo um alerta se houver erro;
 require: Inclui um arquivo, emitindo um erro que encerra a execução do script se houver erro;
 include_once: Inclui e avalia um arquivo apenas uma vez, evitando problemas como redefinição de funções;
 require_once: Inclui um arquivo apenas uma vez, evitando problemas como redefinição de funções
+
+biblioteca.php
+<?php
+/* funçao quadrado 
+* retorna o quadrado do numero 
+*/
+function quadrado($numero)
+{
+    return $numero * $numero;
+}
+?>
+
+teste.php
+<?php
+    // carrega arquivo com a funçao necessaria
+    include 'biblioteca.php';
+
+    //Imprime o quadrado de 4
+    echo quadrado(4);
+?>
