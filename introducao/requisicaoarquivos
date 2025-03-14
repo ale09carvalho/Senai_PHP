@@ -1,0 +1,11 @@
+Requisiçao de Arquivos
+
+A expressão include inclui e avalia o arquivo informado.
+
+Formas de fazer a importação de arquivos
+Você viu que nós usamos o include para incluir um arquivo no PHP, mas ele aceita basicamente 4 formas diferentes de se importar arquivos para um código-fonte:
+
+include: Inclui e avalia um arquivo, emitindo um alerta se houver erro;
+require: Inclui um arquivo, emitindo um erro que encerra a execução do script se houver erro;
+include_once: Inclui e avalia um arquivo apenas uma vez, evitando problemas como redefinição de funções;
+require_once: Inclui um arquivo apenas uma vez, evitando problemas como redefinição de funções
