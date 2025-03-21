@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura de Conta</title>
+</head>
+<body>
+    <h1>Abertura de Conta</h1>
+    <hr>
+    <p><h2>Preencha os campos abaixo:</h2></p>
+    <hr>
+    <form method="POST" action="result.php">
+        <label for="nome" ><b>Nome:</b></label>
+        <input type="text" name="nome" placeholder="Nome completo"><br/><br />
+        
+        <label for="email"><strong>E-mail:</strong></label>
+        <input type="email" name="email" placeholder="Digite seu e-mail aqui" ><br/><br/>
+        
+        <label for="telefone"><b>Telefone:</b></label>
+        <input type="tel" name="telefone" placeholder="(ddd) 9999-9999"><br/><br/>
+        
+        <label for="tipo"><b>Tipo - Pessoa Física ou Pessoa Juridica?:</b></label><br />
+        <select name="tipo">
+            <option value="CPF">CPF</option>
+            <option value="CNPJ">CNPJ</option>
+        </select><br><br>
+        <label for="numConta"><b>Número da Conta:</b></label>
+        <input type="text" name="numConta" required><br><br>
+        
+        <label for="numAgencia"><b>Número da Agência:</b></label>
+        <input type="text" name="numAgencia" required><br><br>
+        
+        <input type="submit" value="Validar">
+    </form>
+</body>
+</html>
