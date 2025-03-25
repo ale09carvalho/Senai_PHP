@@ -3,6 +3,8 @@
     // possso definir dessa forma=>  final class PessoaFisica  * porem nao consegue criar uma a partir dela seria uma classe sem filhos
     // dessa forma ==> final class PessoaFisica extends Pessoa -- ele ja entende que deve pegar da classe pai os atributos (nao precisa colocar tel,ender e email)
 
+    // o operador final é usado para impedir que uma classe seja herdada por outras classes.
+
      final class PessoaFisica extends Pessoa{
         private $nome;
         private $cpf;
